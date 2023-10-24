@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="Account"
+            >
+            <menu>
+                <item
+                    android:id="@+id/nav_account"
+                    android:title="Personal Information"
+                    android:icon="@drawable/icons8_account_30">
+                </item>
+                <item
+                    android:id="@+id/nav_vehicle"
+                    android:title="My Vehicle"
+                    android:icon="@drawable/ic_baseline_directions_car_24">
+                </item>
+                <item
+                    android:id="@+id/nav_report"
+                    android:title="Report Vehicle"
+                    android:icon="@drawable/ic_baseline_directions_car_24">
+                </item>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>
