@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="#C8B6FF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Welcome to the App"
+        android:textSize="80px"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintVertical_bias="0.449" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="84dp"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp">
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="@drawable/rounded_button"
+
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:textColor="@color/white"
+            android:text="Login" />
+        <Space
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+
+
+            android:background="@drawable/rounded_button"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="Register"
+            android:textColor="@color/white" />
+        />
+
+    </LinearLayout>
+
+</RelativeLayout>
