@@ -34,6 +34,18 @@
             android:label="BaseActivity">
 
         </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:label="Register" >
+
+        </activity>
+        <activity
+            android:name=".otpVerification"
+            android:label="Otp"
+            >
+
+        </activity>
+
     </application>
 
 </manifest>
