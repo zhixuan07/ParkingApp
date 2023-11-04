@@ -1,12 +1,16 @@
 package com.example.parkingappinti;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +18,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
-
+    Button registerVehicle, searchVehicle,callAdmin,reportVehicle;
+    BottomNavigationView bottomNavigationView;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -60,5 +65,42 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+    @Override
+    public void  onViewCreated(@NonNull View view, @NonNull Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        bottomNavigationView = view.findViewById(R.id.bottom_navigation_view);
+        registerVehicle = view.findViewById(R.id.registerVehicle);
+        searchVehicle = view.findViewById(R.id.search_Vehicle);
+        reportVehicle = view.findViewById(R.id.reportVehicle);
+        callAdmin = view.findViewById(R.id.callAdmin);
+
+        VehicleFragment vehicleFragment = new VehicleFragment();
+        ReportFragment reportFragment = new ReportFragment();
+        SearchVehicleFragment searchVehicleFragment = new SearchVehicleFragment();
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+
+        registerVehicle.setOnClickListener(v ->{
+            fragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_layout, vehicleFragment)
+                    .addToBackStack(null)
+                    .commit();
+
+        });
+        searchVehicle.setOnClickListener(v -> {
+            fragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_layout, reportFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
+        reportVehicle.setOnClickListener(v -> {
+            fragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_layout, searchVehicleFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
     }
 }
