@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Vehicle Number"
+            android:textColor="@color/black"
+            android:textSize="17sp">
+
+        </TextView>
+        <EditText
+            android:id="@+id/plate_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black">
+
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Type of Issue"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_marginTop="20dp">
+
+        </TextView>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </Spinner>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incident Details"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_marginTop="20dp">
+
+        </TextView>
+        <EditText
+            android:id="@+id/issue_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black">
+
+        </EditText>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
