@@ -68,8 +68,11 @@ public class DialogFragment extends androidx.fragment.app.DialogFragment {
     }
 
     public interface DialogFragmentListener {
+
         void apply(String plate,String brand);
         void applyTexts(String plate, String brand);
     }
 
 }
+
+

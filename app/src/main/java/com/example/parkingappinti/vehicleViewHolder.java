@@ -3,6 +3,7 @@ package com.example.parkingappinti;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -22,4 +23,7 @@ public class vehicleViewHolder extends RecyclerView.ViewHolder {
         plate.setText(vehicle.getPlate());
         brand.setText(vehicle.getBrand());
     }
+
 }
+
+
